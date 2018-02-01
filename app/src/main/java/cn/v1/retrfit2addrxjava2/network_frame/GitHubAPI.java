@@ -26,8 +26,8 @@ public interface GitHubAPI {
     @GET("/repos/{owner}/{repo}/contributors")
     Observable<List<Contributor>> getContributors(@Path("owner") String owner,
                                                   @Path("repo") String repo);
-    //https://search.maven.org/remote_content?g=com.squareup.retrofit2&a=converter-gson&v=LATEST
-    @GET("/remote_content?g=com.squareup.retrofit2&a=converter-gson&v=LATEST")
+
+    @GET("/timg?image&quality=80&size=b9999_10000&sec=1517483557140&di=8ef2706c558749c2c9ae999e4401651d&imgtype=0&src=http%3A%2F%2Fimg5.niutuku.com%2Fphone%2F1301%2F5651%2F5651-niutuku.com-446980.jpg")
     Observable<ResponseBody> getcontributorsAvator();
 
     // !!! 当心大文件，当是大文件时

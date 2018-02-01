@@ -39,7 +39,7 @@ public class RetrofitConfigure {
     /**
      * 图片下载
      */
-    private static String picture_Host = "https://search.maven.org";
+    private static String picture_Host = "https://timgsa.baidu.com";
 
     public static void setPicture_Host(String picture_Host) {
         RetrofitConfigure.picture_Host = picture_Host;

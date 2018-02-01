@@ -23,7 +23,7 @@ public class FileUtil {
         try {
             // todo change the file location/name according to your needs
             File futureStudioIconFile = new File(context.getExternalFilesDir(null) + File.separator + "Future Studio Icon.png");
-
+            Log.e("downloadPath",context.getExternalFilesDir(null) + File.separator + "Future Studio Icon.png");
             InputStream inputStream = null;
             OutputStream outputStream = null;
 
