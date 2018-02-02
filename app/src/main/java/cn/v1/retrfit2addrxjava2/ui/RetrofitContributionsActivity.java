@@ -18,7 +18,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import cn.v1.retrfit2addrxjava2.R;
 import cn.v1.retrfit2addrxjava2.model.Contributor;
-import cn.v1.retrfit2addrxjava2.network_frame.GitHubAPIPackage;
+import cn.v1.retrfit2addrxjava2.network_frame.GitHubAPIImpl;
 import cn.v1.retrfit2addrxjava2.network_frame.core.BaseObserver;
 import cn.v1.retrfit2addrxjava2.network_frame.core.ConnectHttp;
 
@@ -41,7 +41,7 @@ public class RetrofitContributionsActivity extends BaseActivity {
      */
     private void initData() {
 
-        ConnectHttp.connect(GitHubAPIPackage.getContributors("square", "retrofit"),
+        ConnectHttp.connect(new GitHubAPIImpl().getContributors("square", "retrofit"),
                 new BaseObserver<List<Contributor>>(context) {
                     @Override
                     public void onResponse(List<Contributor> contributors) {

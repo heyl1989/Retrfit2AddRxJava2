@@ -1,9 +1,6 @@
 package cn.v1.retrfit2addrxjava2.ui;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
@@ -13,7 +10,7 @@ import java.io.File;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import cn.v1.retrfit2addrxjava2.R;
-import cn.v1.retrfit2addrxjava2.network_frame.GitHubAPIPackage;
+import cn.v1.retrfit2addrxjava2.network_frame.GitHubAPIImpl;
 import cn.v1.retrfit2addrxjava2.network_frame.core.BaseObserver;
 import cn.v1.retrfit2addrxjava2.network_frame.core.ConnectHttp;
 import cn.v1.retrfit2addrxjava2.network_frame.core.FileUtil;
@@ -38,7 +35,7 @@ public class DownLoadActivity extends BaseActivity {
      */
     private void initData() {
 
-        ConnectHttp.connect(GitHubAPIPackage.getcontributorsAvator(),
+        ConnectHttp.connect(GitHubAPIImpl.getcontributorsAvator(),
                 new BaseObserver<ResponseBody>(context) {
                     @Override
                     public void onResponse(ResponseBody responseBody) {
